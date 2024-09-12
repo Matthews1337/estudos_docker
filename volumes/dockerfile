@@ -1,0 +1,11 @@
+FROM php:8-apache
+
+WORKDIR /var/www/html
+
+COPY . .  
+# copiar todos os arquivos da pasta "volumes" para o WORKDIR
+
+EXPOSE 80
+
+RUN chown -R www-data:www-data /var/www
+# dar permissao a todos os arquivos que forem executar
